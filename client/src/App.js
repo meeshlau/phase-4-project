@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div>
-    <Navbar bg="light" expand="lg">
+    {/* <Navbar bg="light" expand="lg">
     <Container>
       <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -39,7 +39,7 @@ function App() {
         </Nav>
       </Navbar.Collapse>
     </Container>
-  </Navbar>
+  </Navbar> */}
     <BrowserRouter>
       <div className="App">
         <Switch>
