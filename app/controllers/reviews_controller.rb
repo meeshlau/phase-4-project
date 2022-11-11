@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
             review = Review.create!(review_params)
             render json: review, status: :created
         else
-            render json: { review.error.messages }, status: 422
+            render json: { errors: review.error.messages }, status: 422
         end
     end
 

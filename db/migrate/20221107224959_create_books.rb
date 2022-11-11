@@ -6,6 +6,7 @@ class CreateBooks < ActiveRecord::Migration[7.0]
       t.string :illustrator
       t.string :genre
       t.string :image_url
+      t.integer :user_id
 
       t.timestamps
     end

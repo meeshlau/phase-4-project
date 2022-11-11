@@ -1,29 +1,28 @@
 class UsersController < ApplicationController
-
     def index
         render json: User.all
     end
     
     def show
-        user = User.find_by(id: params[:id])
-        render json: user
+        user = User.find(params[:id])
+        render json: user, status: :ok
     end
 
     def create
         user = User.create!(user_params)
-        render json: user, status: :created
+            session[:user_id] = user.id
+            render json: user, status: :ok
     end
 
     def destroy
-        user = User.find(params[:id])
-        user.destroy
+        session.delete :user_id
         head :no_content
     end
 
     private
 
     def user_params
-        params.permit(:username, :age)
+        params.permit(:username, :email, :password)
     end
 
 end
